@@ -10,7 +10,7 @@ https://github.com/RethinkRobotics/sawyer_robot/tree/master/sawyer_description
 https://github.com/RethinkRobotics/intera_common
 
 ### PyKDL
-pip install PyKDL
+```pip install PyKDL```
 
 ## Usage
 Launch the saywer robot in RViz
