@@ -10,6 +10,7 @@ project(sawyer_kdl)
 find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   orocos_kdl
+  kdl_parser
   roscpp
   rospy
   sensor_msgs
