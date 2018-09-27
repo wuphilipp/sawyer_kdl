@@ -24,6 +24,6 @@
 
      <node name="rviz" pkg="rviz" type="rviz" args="-d $(find sawyer_description)config/sawyer.rviz" required="true"/>
 
-     <node name="sawyer_jacobian" pkg="saywer_kdl" type="sawyer_jacobian.py" />
+     <node name="sawyer_jacobian" pkg="sawyer_kdl" type="sawyer_jacobian.py" output="screen"/>
 
 </launch>

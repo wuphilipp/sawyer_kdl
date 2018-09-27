@@ -18,7 +18,7 @@ class SawyerRobot:
         flag, self.tree = kdl_parser.treeFromParam("/robot_description")
 
         self.joint_names = rospy.get_param("named_poses/right/joint_names")
-        print(self.joint_names)
+        print self.joint_names
 
         # build kinematic chain and fk and jacobian solvers
         chain_ee = self.tree.getChain(self.baselink, self.endlink)
@@ -43,15 +43,19 @@ class SawyerRobot:
             if (self.debug_count % 10) == 0:
                 frame = kdl.Frame()
                 self.fk_ee.JntToCart(self.joints, frame)
-                print("frame translation:")
-                print(frame.p)
-                print("frame rotation:")
-                print(frame.M)
+
+                print " "
+                print " "
+                print "frame translation:"
+                print frame.p
+                print "frame rotation:"
+                print frame.M
+                print " "
 
                 jacobian = kdl.Jacobian(self.num_joints)
                 self.jac_ee.JntToJac(self.joints, jacobian)
-                print("jacobian")
-                print(jacobian)
+                print "jacobian"
+                print jacobian
 
     def __init__(self, debug=False):
         self.debug = debug
